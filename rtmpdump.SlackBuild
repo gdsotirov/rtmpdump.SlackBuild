@@ -5,7 +5,7 @@
 # Visit SlackPack at http://sotirov-bg.net/slackpack/
 #
 
-. ../slack-package.conf
+. ../../slack-package.conf
 
 NAME=rtmpdump
 VERSION=2.3
@@ -34,13 +34,16 @@ mkdir -p $PKG
 
 # Extract the source
 cd $TMP
-tar -xvf $CWD/$NAME-$VERSION.tgz || exit 1
+tar -xvf $CWD/$NAME-$VERSION.tgz || exit 3
 cd $SRC
 fix_source
 
 # Build & install
-make XCFLAGS="$SLKCFLAGS" -j4 || exit 3
-make DESTDIR=$PKG prefix=/usr install
+make XCFLAGS="$SLKCFLAGS" -j4 || exit 4
+make DESTDIR=$PKG \
+     prefix=/usr \
+     libdir=/usr/lib${LIBDIRSUFFIX} \
+     install || exit 5
 
 # Prepare
 bin_perms $PKG
