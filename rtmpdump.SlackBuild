@@ -39,7 +39,7 @@ cd $SRC
 fix_source
 
 # Build & install
-make XCFLAGS="$SLKCFLAGS" -j4 || exit 3
+make XCFLAGS="$SLKCFLAGS -fPIC" -j4 || exit 3
 make DESTDIR=$PKG \
      prefix=/usr \
      libdir=/usr/lib${LIBDIRSUFFIX} \
