@@ -4,8 +4,8 @@ rtmpdump: A small dumper for media content streamed over the RTMP protocol
 rtmpdump: (like BBC's iPlayer high quality streams).  Supplying an rtmp url
 rtmpdump: will result in a dumped flv file, which can be played/transcoded
 rtmpdump: using ffmpeg/mplayer, etc.
-rtmpdump: This package contains the commandline tools, the streming server,
+rtmpdump: This package contains the command line tools, the streaming server,
 rtmpdump: the shared library and header files needed by programs that want
 rtmpdump: to use it.
 rtmpdump:
-rtmpdump: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
+rtmpdump: Packaged by Georgi D. Sotirov <gdsotirov@gmail.com>
